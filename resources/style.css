@@ -1,0 +1,205 @@
+/* Import Google font - Poppins & Noto */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif; /* Altere aqui para aplicar a fonte Roboto a todos os textos */
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #ff0000;
+}
+::selection{
+  color: #fff;
+  background: #FF0000;
+}
+
+.video-title{
+  font-family: 'Roboto', sans-serif;
+  padding: 5px;
+}
+
+.download-warning {
+  font-size: 14px;
+  color: #FF0000; /* Cor vermelha ou outra cor de sua escolha */
+  margin-top: 10px; /* Espaço superior para separar a mensagem do botão */
+}
+
+
+form{
+  width: 500px;
+  background: #ffffff;
+  padding: 40px ;
+  border-radius: 5px;
+  box-shadow: 10px 10px 13px rgba(0,0,0,0.1);
+}
+
+.header-container {
+  display: flex;
+  align-items: center; 
+}
+
+.yt {
+  width: auto;
+  height: auto; 
+  margin-right: 10px; 
+}
+
+
+form header{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 0px;
+  color: #FF0000 ;
+}
+form .url-input{
+  margin: 30px 0;
+}
+.url-input .title{
+  font-size: 18px;
+  color: #373737;
+}
+.url-input .field{
+  margin-top: 5px;
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+.url-input .field input{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  font-size: 15px;
+  background: #F1F1F7;
+  border-bottom: 2px solid #ccc;
+  font-family: 'Noto Sans', sans-serif;
+}
+.url-input .field input::placeholder{
+  color: #b3b3b3;
+}
+.url-input .field .bottom-line{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: #ff0000;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+.url-input .field input:focus ~ .bottom-line,
+.url-input .field input:valid ~ .bottom-line{
+  transform: scale(1);
+}
+form .preview-area{
+  border-radius: 5px;
+  height: 220px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px dashed #aea6ba;
+}
+.yt{
+  width: 80px;
+}
+.preview-area.active{
+  border: none;
+  width: 100%;
+}
+.preview-area .thumbnail{
+  margin-top: 5px;
+  width: 70%;
+  height: 160px;
+  border: solid rgba(255, 0, 0, 0.655);
+  display: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+.preview-area.active .thumbnail{
+  display: block;
+}
+.preview-area.active .icon,
+.preview-area.active span{
+  display: none;
+}
+.preview-area .icon{
+  color: #282828b0;
+  font-size: 80px;
+}
+.preview-area span{
+  color: #282828ac;
+  margin-top: 25px;
+}
+form .download-btn{
+  color: #fff;
+  height: 53px;
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 30px 0 20px 0;
+  border-radius: 5px;
+  background: #282828;
+  pointer-events: none;
+  transition: background 0.3s ease;
+}
+.download-btn:hover{
+  background: #ff0000  ;
+}
+@media screen and (max-width: 460px){
+  body{
+    padding: 0 20px;
+  }
+  form header{
+    font-size: 24px;
+  }
+  .url-input .field,
+  form .download-btn{
+    height: 45px;
+  }
+  form .download-btn{
+    font-size: 15px;
+  }
+  form .preview-area{
+    height: 130px;
+  }
+  .preview-area .icon{
+    font-size: 50px;
+  }
+  .preview-area span{
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}
+/* CSS existente */
+
+body {
+  min-height: 100vh; /* Garante que o corpo da página ocupe pelo menos a altura da tela */
+  display: flex;
+  flex-direction: column; /* Para que o rodapé fique no final da página */
+}
+
+/* Restante do seu CSS existente */
+
+footer {
+  background-color: #FF0000
+  ; /* Cor de fundo do rodapé (opcional) */
+  color: #fff; /* Cor do texto do rodapé (opcional) */
+  padding: 10px 0; /* Espaçamento interno no rodapé (opcional) */
+  text-align: center; /* Centralizar o conteúdo do rodapé (opcional) */
+  position: sticky;
+  bottom: 0; /* Fixar o rodapé na parte inferior */
+  margin-top: 100px;
+}
+
